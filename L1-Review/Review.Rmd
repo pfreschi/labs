@@ -10,33 +10,37 @@ output: html_document
 #https://www.healthdata.gov/dataset/deaths-pnuemonia-and-influneza-and-all-deaths-state-and-region-national-center-health
 
 #We will be requiring knitr, dplyr, and ggplot2
+install.packages("knitr")
+install.packages("dplyr")
+install.packages("ggplot2")
 
-
+library(knitr)
+library(dplyr)
+library(ggplot2)
+```
 
 #Read in the dataset
-
+fludata = read.csv("flu_deaths.csv")
 
 
 #Handle NA values
-
-
+fludata[is.na(fludata)] <- 0
+# set all NA values to zero
 
 
 #Create one summary table and one plot about two different aspects of the dataset. Include a small paragraph explaining what each table/plot is showing.
+The summary table includes information about the different variables, like the minimum value, maximum value, and the quartile values.
 
-```
-
-###Your explanation goes here!
 Play around with markdown syntax to create *interesting* and **engaging** text.
 
 ```{r table, echo=FALSE}
 #Summary Table
-
+summary(fludata)
 ```
 
 ```{r plot, echo=FALSE}
 #Plot
-
+qplot(fludata$age, fludata$Deaths.from.pneumonia.and.influenza, data=fludata)
 ```
 
 ```{r challenge, echo=FALSE}
