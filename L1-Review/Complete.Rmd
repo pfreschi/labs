@@ -9,7 +9,7 @@ output: html_document
 #The dataset we are exploring has influenza and pneumonia deaths on a state and national level, over time. 
 
 #We will be requiring knitr, dplyr, and ggplot2
-setwd('~/TA stuff/Winter2017/labs/L1-Review/')
+#setwd('~/L1-Review/')
 require(dplyr)
 require(knitr)
 require(ggplot2)
