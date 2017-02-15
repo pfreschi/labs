@@ -1,0 +1,42 @@
+L5 - Shiny
+
+I recommend requiring the following packages for this assignment: Shiny, HSAUR, dplyr, and ggplot2
+
+Using the dataset womensroles from the HSUAR package, answer the following questions.
+
+How does the level of education influence the responses of men?
+
+How does the level of education influence the responses of women?
+
+How do the responses of women compare to the responses of men?
+
+Why do you think this is?
+
+After exploring the data, build an interactive web page that allows the user to ask these questions of the data as well.
+You'll do this by building a Shiny application that allows the user to specify what kind of data they want to see on a plot.
+You'll include a way for the user to select just men's responses, women's responses, or both, as well as the level of education.
+
+To begin, create a new Shiny document in RStudio. Previously you had to make two R files and have them communicate, 
+but now through the power of science and technology you can stay in one file (although this has organizational consequences).
+
+After making the Shiny app, you'll see that there are two functions, ui and server. In each of these functions you specify what 
+you want the user to interact with (ui) and what will be shown depending on what they choose (server).
+
+Since the ui handles what the user sees, make sure you call whatever your output function is named (from server) in the main panel 
+section of ui (you can see this relationship in the example code R supplies when you open a shiny document).
+
+Similarly, to access your input values from ui in server, you have to access them by their inputID (input$whateveryoucalledyourinput).
+
+Create a selectInput in ui where the user can select either Men, Women, or Both. 
+Create a selectInput in ui where the user can select if they Agree or Disagree.
+Creat a sliderInput in ui where the user can select the level of education.
+
+In server, consider what the user is selecting, modify the dataset accordingly, and create one plot that responds to the users parameters.
+
+Make sure everything has purposeful and meaningful labels - lots of whatever$column in the homework assignment!
+
+Using the data you calculated in the beginning, create a report to go along with your graph, explaining the context of the graph, 
+highlighting interesting statistics, and drawing a conclusion about the data.
+
+
+BONUS: Figure out a way to show both Agree and Disagree on the same plot.
