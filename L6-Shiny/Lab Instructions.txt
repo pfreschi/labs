@@ -1,5 +1,7 @@
 L5 - Shiny
 
+I recommend requiring the following packages for this assignment: Shiny, HSAUR, dplyr, and ggplot2
+
 Using the dataset womensroles from the HSUAR package, answer the following questions.
 
 How does the level of education influence the responses of men?
@@ -35,5 +37,6 @@ Make sure everything has purposeful and meaningful labels - lots of whatever$col
 
 Using the data you calculated in the beginning, create a report to go along with your graph, explaining the context of the graph, 
 highlighting interesting statistics, and drawing a conclusion about the data.
+
 
 BONUS: Figure out a way to show both Agree and Disagree on the same plot.
